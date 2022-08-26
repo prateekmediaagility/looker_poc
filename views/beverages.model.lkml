@@ -18,4 +18,10 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
-explore: report_1_final {}
+explore: report_1_final {
+  join: customer_details {
+    sql_on: ${report_1_final.customer_id}=${customer_details.customer_id} ;;
+    relationship: many_to_one
+  }
+}
+explore: customer_details {}
