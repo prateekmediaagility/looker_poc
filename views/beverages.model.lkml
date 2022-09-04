@@ -28,3 +28,4 @@ explore: report_1_final {
 }
 explore: customer_details {}
 explore: customer_details_from_sql_runner {}
+explore: employee {}
