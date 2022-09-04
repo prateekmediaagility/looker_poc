@@ -2,7 +2,7 @@
 
 # include: "beverages.model.lkml"
 
-view: add_a_unique_name_1662306268 {
+view: customer_details_PDTs {
   derived_table: {
     datagroup_trigger: daily_datagroup
     explore_source: report_1_final {
