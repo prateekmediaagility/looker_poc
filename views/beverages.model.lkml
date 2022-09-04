@@ -2,7 +2,17 @@ connection: "gbu_looker_poc"
 
 include: "/views/*.view.lkml"   # include all views in the views/ folder in this project
 
+datagroup: beverages_default_datagroups{
+  max_cache_age: "1 hours"
+}
 
+persist_with: beverages_default_datagroups
+
+datagroup: daily_datagroup {
+  sql_trigger: SELECT FORMAT_TIMESTAMP('%F',
+    CURRENT_TIMESTAMP(), 'America/Los_Angeles') ;;
+  max_cache_age: "24 hours"
+}
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
