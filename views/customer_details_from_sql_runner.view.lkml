@@ -1,5 +1,6 @@
 view: customer_details_from_sql_runner {
   derived_table: {
+
     sql: SELECT
           report_1_final.CUSTOMER_ID  AS cust_id,
           report_1_final.CUST_NAME  AS cust_name,
@@ -14,8 +15,11 @@ view: customer_details_from_sql_runner {
           3
       ORDER BY
           4 DESC
+
        ;;
+      sql_trigger_value: SELECT  extract (date FROM  current_timestamp() );;
   }
+
 
   measure: count {
     type: count
