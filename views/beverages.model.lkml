@@ -9,8 +9,8 @@ datagroup: beverages_default_datagroups{
 persist_with: beverages_default_datagroups
 
 datagroup: daily_datagroup {
-  sql_trigger: SELECT FORMAT_TIMESTAMP('%F',
-    CURRENT_TIMESTAMP(), 'America/Los_Angeles') ;;
+ sql_trigger: SELECT FORMAT_TIMESTAMP('%F',
+   CURRENT_TIMESTAMP(), 'America/Los_Angeles') ;;
   max_cache_age: "24 hours"
 }
 # include: "/**/*.view.lkml"                 # include all views in this project
