@@ -15,6 +15,7 @@ view: customer_details {
   dimension: customer_id {
     description: ""
   }
+
   dimension: cust_name {
     description: ""
   }

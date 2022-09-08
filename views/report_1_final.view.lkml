@@ -75,6 +75,9 @@ view: report_1_final {
     sql: ${TABLE}.CUST_CD ;;
   }
 
+
+
+
   dimension: cust_name {
     type: string
     sql: ${TABLE}.CUST_NAME ;;
@@ -83,6 +86,14 @@ view: report_1_final {
   dimension: customer_id {
     type: string
     sql: ${TABLE}.CUSTOMER_ID ;;
+  }
+
+
+  dimension: customer_order_history_button {
+    label: "Customer Order History"
+    sql: ${TABLE}.customer_id ;;
+    html: <a href="/explore/beverages/report_1_final?fields=report_1_final.customer_id, report_1_final.brand,report_1_final.category&
+    f[report_1_final.customer_id]={{ value }}"><button>Customer Order History</button></a> ;;
   }
 
   dimension: disc_type {

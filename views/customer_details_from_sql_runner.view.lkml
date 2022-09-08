@@ -31,6 +31,8 @@ view: customer_details_from_sql_runner {
     sql: ${TABLE}.cust_id ;;
   }
 
+
+
   dimension: cust_name {
     type: string
     sql: ${TABLE}.cust_name ;;
