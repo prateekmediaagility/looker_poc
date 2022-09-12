@@ -14,6 +14,12 @@ datagroup: daily_datagroup {
   sql_trigger: SELECT max(cust_cd) FROM customer_details_PDTs ;;
   max_cache_age: "24 hours"
 }
+
+
+#access_grant: can_view_customer_data {
+  #user_attribute: city
+  #allowed_values: ["Belgaum" ,"Raigarh"]
+#}
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 

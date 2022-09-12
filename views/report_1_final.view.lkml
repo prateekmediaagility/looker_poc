@@ -11,6 +11,10 @@ view: report_1_final {
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Amount" in Explore.
 
+ # dimension: customer_data_field{
+  #required_access_grants: [can_view_customer_data]
+#  }
+
   dimension: amount {
     type: number
     sql: ${TABLE}.Amount ;;
