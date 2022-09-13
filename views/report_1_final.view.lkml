@@ -67,6 +67,7 @@ view: report_1_final {
   dimension: city {
     type: string
     sql: ${TABLE}.City ;;
+    suggestable: no
   }
 
   dimension: container {

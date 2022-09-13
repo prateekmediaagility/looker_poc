@@ -38,9 +38,12 @@ datagroup: daily_datagroup {
 #   }
 # }
 explore: report_1_final {
+  #sql_always_where: ${brand} <> 'Aquafina' ;;
   join: customer_details {
     sql_on: ${report_1_final.customer_id}=${customer_details.customer_id} ;;
     relationship: many_to_one
+
+
   }
   join: salesman_report_2 {
     sql_on: ${report_1_final.customer_id}=${salesman_report_2.customer_id} ;;
@@ -52,6 +55,8 @@ explore: report_1_final {
 
   }
 }
-explore: customer_details {}
+explore: customer_details {
+  sql_always_where: ${cust_name} <>  'KIRSHNA DAIRY' ;;
+}
 explore: customer_details_from_sql_runner {}
 explore: customer_details_PDTs {}

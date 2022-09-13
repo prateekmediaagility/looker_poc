@@ -10,7 +10,7 @@ view: distributor_report_2 {
   # Here's what a typical dimension looks like in LookML.
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Amount" in Explore.
-
+suggestions: yes
   dimension: amount {
     type: number
     sql: ${TABLE}.Amount ;;

@@ -18,6 +18,7 @@ view: customer_details {
 
   dimension: cust_name {
     description: ""
+    bypass_suggest_restrictions: yes
   }
   dimension: cust_cd {
     description: ""
@@ -29,4 +30,6 @@ view: customer_details {
     description: ""
     type: number
   }
+  #${view_name.field_name} references a dimension or measure from another view. For example:
+
 }
